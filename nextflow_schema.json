@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/./master/nextflow_schema.json",
+  "title": ". pipeline parameters",
+  "description": "",
+  "type": "object",
+  "definitions": {
+    "general_parameters": {
+      "title": "General parameters",
+      "type": "object",
+      "fa_icon": "fas fa-dna",
+      "description": "Basic parameters required by the workflow",
+      "properties": {
+        "fasta": {
+          "type": "string",
+          "format": "file-path",
+          "exists": true,
+          "mimetype": "text/plain",
+          "description": "Path to input fasta files.",
+          "fa_icon": "far fa-file-code",
+          "default": "projectDir/data/*"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/general_parameters"
+    }
+  ]
+}
