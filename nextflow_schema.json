@@ -11,7 +11,7 @@
       "fa_icon": "fas fa-dna",
       "description": "Basic parameters required by the workflow",
       "properties": {
-        "fasta": {
+        "fastas": {
           "type": "string",
           "format": "file-path",
           "exists": true,
